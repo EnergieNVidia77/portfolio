@@ -97,7 +97,7 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.7 }}
           >
             <motion.a
-              href="https://github.com"
+              href="https://github.com/EnergieNVidia77"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white hover:text-blue-400 transition-colors"
@@ -108,7 +108,7 @@ export function Hero() {
               <Github className="w-5 h-5 md:w-6 md:h-6" />
             </motion.a>
             <motion.a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/toufictalha/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white hover:text-blue-400 transition-colors"
@@ -119,7 +119,7 @@ export function Hero() {
               <Linkedin className="w-5 h-5 md:w-6 md:h-6" />
             </motion.a>
             <motion.a
-              href="mailto:votre.email@example.com"
+              href="mailto:toufictalhapro@gmail.com"
               className="text-white hover:text-blue-400 transition-colors"
               aria-label="Email"
               whileHover={{ scale: 1.2 }}
