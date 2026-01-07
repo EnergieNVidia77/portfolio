@@ -17,13 +17,6 @@ export default function ScrollReveal({
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-50px' });
 
-  const directions = {
-    up: { y: 40, x: 0 },
-    down: { y: -40, x: 0 },
-    left: { x: 40, y: 0 },
-    right: { x: -40, y: 0 },
-  };
-
   // Réduire l'animation sur mobile pour meilleures performances
   const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
   const animationDistance = isMobile ? 20 : 40;
