@@ -45,6 +45,7 @@ const skills: Skill[] = [
   { name: 'Netlify', category: 'Cloud / Déploiement' },
 
   { name: 'Git / GitHub & Gitlab', category: 'Outils' },
+  { name: 'FHIR (Fast Healthcare Interoperability Resources)', category: 'Outils' },
   { name: 'VS Code', category: 'Outils' },
   { name: 'Eclipse', category: 'Outils' },
   { name: 'Shell / Linux', category: 'Outils' },

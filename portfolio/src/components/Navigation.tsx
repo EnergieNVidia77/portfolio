@@ -63,7 +63,7 @@ export function Navigation() {
                 scrolled ? 'text-gray-900' : 'text-white'
               }`}
             >
-              Portfolio
+              Toufic Talha
             </span>
           </button>
 

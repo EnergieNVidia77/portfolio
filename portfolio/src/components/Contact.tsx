@@ -1,5 +1,6 @@
 import { Mail, Github, Linkedin } from 'lucide-react';
 import { useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -10,11 +11,26 @@ export function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real application, you would send this to a backend API
-    console.log('Form submitted:', formData);
+
+    emailjs.send(
+      import.meta.env.VITE_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+      {
+        from_name: formData.name,
+        from_email: formData.email,
+        message: formData.message,
+      },
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+    )
+  .then(() => {
     alert('Merci pour votre message ! Je vous répondrai bientôt.');
     setFormData({ name: '', email: '', message: '' });
-  };
+  })
+  .catch((err) => {
+    console.error('Erreur en envoyant le mail:', err);
+    alert('Oups, une erreur est survenue. Réessayez plus tard.');
+  });
+};
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -49,7 +65,7 @@ export function Contact() {
                       href="mailto:votre.email@example.com"
                       className="text-gray-600 hover:text-blue-600 transition-colors"
                     >
-                      votre.email@example.com
+                      toufictalhapro@gmail.com
                     </a>
                   </div>
                 </div>
@@ -59,12 +75,12 @@ export function Contact() {
                   <div>
                     <p className="text-gray-800 mb-1">GitHub</p>
                     <a
-                      href="https://github.com/votrepseudo"
+                      href="https://github.com/EnergieNVidia77"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-gray-600 hover:text-blue-600 transition-colors"
                     >
-                      github.com/votrepseudo
+                      github.com/EnergieNVidia77
                     </a>
                   </div>
                 </div>
@@ -74,12 +90,12 @@ export function Contact() {
                   <div>
                     <p className="text-gray-800 mb-1">LinkedIn</p>
                     <a
-                      href="https://linkedin.com/in/votreprofil"
+                      href="https://www.linkedin.com/in/toufictalha/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-gray-600 hover:text-blue-600 transition-colors"
                     >
-                      linkedin.com/in/votreprofil
+                      linkedin.com/in/toufictalha
                     </a>
                   </div>
                 </div>
