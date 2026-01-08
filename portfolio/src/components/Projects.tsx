@@ -93,7 +93,7 @@ export function Projects() {
                       className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 transition-colors"
                     >
                       <Link className="w-3 h-3 md:w-4 md:h-4" />
-                      <span className="text-xs md:text-sm">Voir le Code</span>
+                      <span className="text-xs md:text-sm">Voir le Site</span>
                     </a>}
                   </div>
                 </motion.div>
